@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="message" id="messageBox">
+            <p>✨ Welcome to Anime World! Dive into your favorite anime adventures today! ✨</p>
+            <button class="close-btn" onclick="dismissMessage()">×</button>
+        </div>
+
+        <navbar class="navbar">
+            <ul>
+                <li><a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/hG2BN61Z/logo.avif' border='0' alt='logo' class="logo"/></a></li>
+                <li class="welcome"><h1>Welcome to Anime World!</h1></li>
+            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#series">Series</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="searchBar" class="search-input" placeholder="Search anime..."
+                        oninput="showSuggestions(this.value)" />
+                    <ul id="suggestionList" class="suggestion-list"></ul>
+                </div>
+            </nav>
+        </navbar>
+    </header>
+
+
+    <main>
+        <section id="home">
+            <h2>Featured Anime</h2>
+            <p>Discover the latest and greatest anime series and movies.</p>
+            <div class="card">
+                <a href="solo_leveling.html" class="button">
+                    <img src="https://i.postimg.cc/wTzmk40R/solo-leveling-season-1.jpg" alt="Solo Leveling">
+                    <div class="card-content">
+                        <h3>Solo Leveling</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="mashle_magic_&_muscles.html" class="button">
+                    <img src="https://i.postimg.cc/fyn0p8sF/Mashle-Magic-and-Muscles-season-1.jpg" alt="Mashle Magic and Muscles">
+                    <div class="card-content">
+                        <h3>Mashle Magic and Muscles</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="Tokyo_Revengers.html" class="button" style="padding-top: 17px;">
+                    <img src="https://i.postimg.cc/VNJrNxLp/Tokyo-Revengers.webp" alt="Tokyo Revengers">
+                    <div class="card-content">
+                        <h3>Tokyo Revengers</h3>
+                </a>
+            </div>
+        </section>
+
+
+        <section id="series">
+            <h2>Anime Series</h2>
+            <p>Explore our extensive collection of anime series.</p>
+            <div class="card">
+                <a href="solo_leveling.html" class="button">
+                    <img src="https://i.postimg.cc/wTzmk40R/solo-leveling-season-1.jpg" alt="Solo Leveling">
+                    <div class="card-content">
+                        <h3>Solo Leveling</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="mashle_magic_&_muscles.html" class="button">
+                    <img src="https://i.postimg.cc/fyn0p8sF/Mashle-Magic-and-Muscles-season-1.jpg" alt="Mashle Magic and Muscles">
+                    <div class="card-content">
+                        <h3>Mashle Magic and Muscles</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="Tokyo_Revengers.html" class="button" style="padding-top: 17px;">
+                    <img src="https://i.postimg.cc/VNJrNxLp/Tokyo-Revengers.webp" alt="Tokyo Revengers">
+                    <div class="card-content">
+                        <h3>Tokyo Revengers</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="Spy_X_Family.html" class="button">
+                    <img src="https://i.postimg.cc/PJyryy51/Spy-X-Family-anime-affiche-S1.jpg" alt="Spy X Family">
+                    <div class="card-content">
+                        <h3>Spy X Family S1</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="Wind_Breaker.html" class="button">
+                    <img src="https://i.postimg.cc/DyfzZ9x6/Wind-Breaker.webp" alt="Wind Breaker">
+                    <div class="card-content">
+                        <h3>Wind Breaker</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="Baki_Hanma.html" class="button">
+                    <img src="https://i.postimg.cc/mZw5jCVV/Baki-Hanma.jpg" alt="Baki Hanma">
+                    <div class="card-content">
+                        <h3>Baki Hanma</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="Baki_Hanma.html" class="button" style="padding-top: 17px;">
+                    <img src="https://i.postimg.cc/FRrgybGL/91-PE0-W1-NFl-L.jpg" alt="Baki Hanma">
+                    <div class="card-content">
+                        <h3>86 (Eighty-Six)</h3>
+                </a>
+            </div>
+            </div>
+        </section>
+
+
+        <section id="movies">
+            <h2>Anime Movies</h2>
+            <p>Watch the best anime movies of all time.</p>
+            <div class="card">
+                <a href="https://mega.nz/file/DHowUbyB#p5xl23-FrJyv1CEls1G2ZMOsfr5pNfMifDF9d-XiX3c" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/qRXkBwnW/your-name.jpg" alt="Your Name">
+                    <div class="card-content">
+                        <h3>Your Name</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="https://mega.nz/file/uXxEmKyQ#cTsF7tN94dmrd9P0iBAjID0XiyBWn1EE2-bXEb4WPn4" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/qqs0DRby/5-centimeter-per-second.jpg" alt="5 Centimeter per Second">
+                    <div class="card-content">
+                        <h3>5 Centimeter per Second</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="https://mega.nz/file/2OoXRDZb#SKYpeNM71pWGgQVlCz5s68qWmcRUzfxwIzpHwMFbCsg" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/9FNcfrRX/weathering-with-you.webp" alt="Weathering with you">
+                    <div class="card-content">
+                        <h3>Weathering with you</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="https://mega.nz/file/XGJ0maZQ#wx7hxo04MCNCQbOrjLwnPCZFnKGYtK9cqZi_Pibg-cM" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/PxnNwRS5/Batman-Ninja.webp" alt="Batman Ninja">
+                    <div class="card-content">
+                        <h3>Batman Ninja</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="https://mega.nz/file/eLpVxZKL#nvYl_ezUOjCO7n-hUYDkEv8jIOUCbOCVg43TXo_2glA" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/2SpprNyy/a-silent-voice.jpg" alt="A Silent Voice">
+                    <div class="card-content">
+                        <h3>A Silent Voice</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="https://mega.nz/file/bPQyWBZL#ykKxo0hAS_t2Nq3SLltqFhghcQyPI17DA7yh9VzoIb0" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/Fs4qBgBk/my-neighbor-totoro.jpg" alt="My Neighbor Totoro">
+                    <div class="card-content">
+                        <h3>My Neighbor Totoro</h3>
+                </a>
+            </div>
+            </div>
+            <div class="card">
+                <a href="https://mega.nz/file/3SoUyR5a#kiOBUgKOqjRZFeBqbUwLNGIPgAx6A8tT8rNrlFzX9hc" class="button" target="_blank">
+                    <img src="https://i.postimg.cc/k5zYFxS4/The-boy-and-the-heron.jpg" alt="The boy and the heron">
+                    <div class="card-content">
+                        <h3>The Boy and The Heron</h3>
+                </a>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>        
+        <div class="form-wrapper" id="formWrapper">
+            <form id="animeForm" method="POST" action="request_form.php">
+            <h2>Request an Anime</h2>
+            <p>Can't find your favorite anime? Request it here!</p>
+            <input type="text" name="u_name" placeholder="Your Name" required><br>
+            <input type="email" name="u_eid" placeholder="Your Email" required><br>  
+            <input type="text" name="a_name" placeholder="Anime Name" required><br> 
+            <button type="submit" onclick="handleSubmit(event)">Submit Request</button>
+        </form>
+        <div class="message" id="formMessage" style="display: none;">
+            <p>✨ Your request has been submitted successfully! ✨</p>
+            <button class="close-btn" onclick="dismissFormMessage()">×</button>
+        </div>
+        </div>
+        <div class="end-msg">
+            <h2>✨ Thank you for visiting Anime World! ✨</h2>
+        </div>
+        <p>&copy; 2025 Anime World. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
