@@ -200,6 +200,7 @@
             <input type="text" name="a_name" placeholder="Anime Name" required><br> 
             <button type="submit" onclick="handleSubmit(event)">Submit Request</button>
         </form>
+        <div id="response"></div>
         <div class="message" id="formMessage" style="display: none;">
             <p>✨ Your request has been submitted successfully! ✨</p>
             <button class="close-btn" onclick="dismissFormMessage()">×</button>
@@ -211,5 +212,24 @@
         <p>&copy; 2025 Anime World. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            let formData = new FormData(this); //Gather form data
+    
+            fetch('process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('response').innerHTML = data; // Display server response
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('response').innerHTML = "An error occurred.";
+            });
+        });
+    </script>
 </body>
 </html>

@@ -28,11 +28,11 @@ function showSuggestions(input) {
     suggestionList.innerHTML = ""; // Clear previous suggestions
 
     if (input.trim().length === 0) return; // Stop if input is empty
-    
+
     const suggestions = animeData.filter(anime =>
         anime.title.toLowerCase().includes(input.toLowerCase())
     );
-    
+
     suggestions.forEach(anime => {
         const li = document.createElement("li");
         li.textContent = anime.title;
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
+
     if (searchIcon) {
         searchIcon.addEventListener('click', function () {
             searchAnime();
@@ -80,55 +80,21 @@ document.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById('animeForm'); // Make sure your form has the id "animeForm"
 const statusDiv = document.getElementById('formStatus'); // Add a div with the id "formStatus" to display messages
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const formData = new FormData(form);
-    
-    fetch('process_form.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(message => {
-      statusDiv.textContent = message;
-      form.reset(); // Clear the form (optional)
-    })
-    .catch(error => {
-      statusDiv.textContent = "Error: " + error;
-    });
-  });
-
-// after the form is submitted, show a success message
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById('animeForm'); // Make sure your form has the id "animeForm"
-    const statusDiv = document.getElementById('formStatus'); // Add a div with the id "formStatus" to display messages
-
-    form.addEventListener('submit', handleSubmit);
-});
-
-function handleSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const form = document.getElementById('animeForm');
-    const formMessage = document.getElementById('formMessage');
     const formData = new FormData(form);
 
     fetch('process_form.php', {
         method: 'POST',
         body: formData
     })
-    .then(response => response.text())
-    .then(message => {
-        formMessage.style.display = 'block'; // Show the success message
-        form.reset(); // Clear the form (optional)
-    })
-    .catch(error => {
-        alert("Error: " + error);
-    });
-}
-
-function dismissFormMessage() {
-    const formMessage = document.getElementById('formMessage');
-    formMessage.style.display = 'none'; // Hide the success message
-}
+        .then(response => response.text())
+        .then(message => {
+            statusDiv.textContent = message;
+            form.reset(); // Clear the form (optional)
+        })
+        .catch(error => {
+            statusDiv.textContent = "Error: " + error;
+        });
+});
